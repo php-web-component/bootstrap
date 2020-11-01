@@ -1,0 +1,34 @@
+{
+    "name": "php-web-component/bootstrap",
+    "description": "PHP Web Component Bootstrap",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bagus A Priambada",
+            "email": "iam.adty@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PWC\\": "core/",
+            "PWC\\Bootstrap\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php-web-component/asset": "dev-develop",
+        "php-web-component/html": "dev-develop"
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../asset"
+        },
+        {
+            "type": "path",
+            "url": "../html"
+        }
+    ]
+}
