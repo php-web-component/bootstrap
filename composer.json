@@ -12,23 +12,48 @@
     "autoload": {
         "psr-4": {
             "PWC\\": "core/",
-            "PWC\\Bootstrap\\": "src/"
+            "PWC\\Asset\\": "asset/",
+            "PWC\\Component\\Bootstrap\\": "src/"
         }
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
         "php-web-component/asset": "dev-develop",
-        "php-web-component/html": "dev-develop"
+        "php-web-component/html": "dev-develop",
+        "php-web-component/jquery": "dev-develop"
     },
     "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        {
+            "type": "path",
+            "url": "../core"
+        },
         {
             "type": "path",
             "url": "../asset"
         },
         {
             "type": "path",
+            "url": "../assets-manager"
+        },
+        {
+            "type": "path",
             "url": "../html"
+        },
+        {
+            "type": "path",
+            "url": "../cli"
+        },
+        {
+            "type": "path",
+            "url": "../jquery"
         }
-    ]
+    ],
+    "require-dev": {
+        "twbs/bootstrap": "3.4.1"
+    }
 }
