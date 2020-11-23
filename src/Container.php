@@ -1,12 +1,17 @@
 <?php namespace PWC\Component\Bootstrap;
 
-class Container extends \PWC\Component\Html\Div
+use PWC\BuilderTrait;
+use PWC\Component\Html\Div;
+
+class Container extends Div
 {
+    protected $_ID = 'pwc-bootstrap-container';
+
     protected $_attributes = [
         'class' => [
             'container'
         ]
     ];
 
-    use \PWC\BuilderTrait;
+    use BuilderTrait;
 }

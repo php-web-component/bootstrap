@@ -1,6 +1,8 @@
 <?php namespace PWC\Asset;
 
-class Bootstrap extends \PWC\Asset
+use PWC\Asset;
+
+class Bootstrap extends Asset
 {
     public static $package = 'php-web-component/bootstrap';
     public static $name = 'Bootstrap';

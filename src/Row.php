@@ -1,12 +1,17 @@
 <?php namespace PWC\Component\Bootstrap;
 
-class Row extends \PWC\Component\Html\Div
+use PWC\BuilderTrait;
+use PWC\Component\Html\Div;
+
+class Row extends Div
 {
+    protected $_ID = 'pwc-bootstrap-row';
+
     protected $_attributes = [
         'class' => [
             'row'
         ]
     ];
 
-    use \PWC\BuilderTrait;
+    use BuilderTrait;
 }

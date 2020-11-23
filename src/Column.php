@@ -1,7 +1,12 @@
 <?php namespace PWC\Component\Bootstrap;
 
-class Column extends \PWC\Component\Html\Div
+use PWC\BuilderTrait;
+use PWC\Component\Html\Div;
+
+class Column extends Div
 {
+    protected $_ID = 'pwc-bootstrap-column';
+
     protected $_colIndex = 0;
 
     protected $_attributes = [
@@ -53,10 +58,10 @@ class Column extends \PWC\Component\Html\Div
     {
         $this->_attributes['class'] = array_map(function ($item) {
             return $item == 'col' ? '' : trim($item);
-        }, $this->_attributes['class']);
+        }, array_unique($this->_attributes['class']));
 
         return parent::render();
     }
 
-    use \PWC\BuilderTrait;
+    use BuilderTrait;
 }
