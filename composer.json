@@ -9,6 +9,8 @@
             "email": "iam.adty@gmail.com"
         }
     ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "PWC\\": "core/",
@@ -16,27 +18,14 @@
             "PWC\\Component\\Bootstrap\\": "src/"
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": true,
     "require": {
+        "php-web-component/core": "dev-develop",
         "php-web-component/asset": "dev-develop",
         "php-web-component/html": "dev-develop",
         "php-web-component/jquery": "dev-develop"
     },
     "require-dev": {
-        "twbs/bootstrap": "3.4.1"
-    },
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "http://localhost/satis"
-        },
-        {
-            "type": "composer",
-            "url": "https://asset-packagist.org"
-        }
-    ],
-    "config": {
-        "secure-http": false
+        "twbs/bootstrap": "3.4.1",
+        "kint-php/kint": "^3.3"
     }
 }
