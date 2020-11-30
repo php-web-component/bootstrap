@@ -11,8 +11,26 @@ use PWC\Config\Asset;
 class Bootstrap extends Component
 {
     protected $_ID = 'pwc-bootstrap';
-
     protected ?JQuery $jquery;
+
+    protected function init()
+    {
+        parent::init();
+
+        Meta::register([
+            'charset' => 'utf-8',
+        ]);
+        Meta::register([
+            'httpEquiv' => 'X-UA-Compatible',
+            'content' => 'IE=edge'
+        ]);
+        Meta::register([
+            'name' => 'viewport',
+            'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no'
+        ]);
+        Style::register(Asset::get('dir') . 'php-web-component/bootstrap/css/bootstrap.min.css');
+        Script::register(Asset::get('dir') . 'php-web-component/bootstrap/js/bootstrap.min.js');
+    }
 
     public function render(): string
     {
@@ -21,20 +39,7 @@ class Bootstrap extends Component
                 Text::build('Bootstrap')
             )->withDecorators($this->_decorators)->asDecorator()->replace(),
 
-            Meta::register([
-                'charset' => 'utf-8',
-            ]),
-            Meta::register([
-                'httpEquiv' => 'X-UA-Compatible',
-                'content' => 'IE=edge'
-            ]),
-            Meta::register([
-                'name' => 'viewport',
-                'content' => 'width=device-width, initial-scale=1, shrink-to-fit=no'
-            ]),
-            Style::register(Asset::get('dir') . 'php-web-component/bootstrap/css/bootstrap.min.css'),
             parent::render(),
-            Script::register(Asset::get('dir') . 'php-web-component/bootstrap/js/bootstrap.min.js'),
 
             ...$this->_decorators->get(),
         ))->withDecorators($this->_decorators);
