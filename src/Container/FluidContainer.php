@@ -1,6 +1,6 @@
 <?php namespace PWC\Component\Bootstrap\Container;
 
-use PWC\BuilderTrait;
+use PWC\Component\BuilderTrait;
 use PWC\Component\Bootstrap\Container;
 
 class FluidContainer extends Container

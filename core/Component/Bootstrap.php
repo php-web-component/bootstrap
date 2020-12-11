@@ -1,6 +1,5 @@
 <?php namespace PWC\Component;
 
-use PWC\BuilderTrait;
 use PWC\Component;
 use PWC\Component\Html\Meta;
 use PWC\Component\Html\Script;
